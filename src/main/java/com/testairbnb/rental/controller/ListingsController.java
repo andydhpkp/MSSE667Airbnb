@@ -13,12 +13,12 @@ import com.testairbnb.rental.domain.Listing;
 import com.testairbnb.rental.repository.ListingsRepository;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
 public class ListingsController {
 	
 	@Autowired
 	private ListingsRepository repository;
 	
+	@CrossOrigin(origins = "http://localhost:3000")
 	@RequestMapping(value = "/listings", method = RequestMethod.GET)
 	public List<Listing> getAllListings() {
 		System.out.println("Retrieving listings......");
